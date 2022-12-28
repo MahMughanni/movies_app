@@ -14,9 +14,9 @@ class MoviesRepository extends BaseMoviesRepository {
   @override
   Future<Either<Failure, List<Movie>>> getNowPlayingMovies() async {
     final response = await baseMovieRemoteDataSource.getNowPlayingMovies();
-
-    try { 
+    try {
       return Right(response);
+
     } on ServerExceptions catch (error) {
       return Left(ServerFailure(error.errorMessageModel.statusMessage));
     }

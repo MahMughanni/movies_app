@@ -1,8 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:movies_app/core/services/services_locator.dart';
+import 'package:movies_app/data/datasource/movie_remote_datasource.dart';
+import 'package:movies_app/data/repository/movies_repository.dart';
+import 'package:movies_app/domain/usecase/get_now_playing_movies_usecase.dart';
 import 'package:movies_app/presentation/screens/movies_screen.dart';
 
+import 'domain/repository/base_movies_repository.dart';
+
 void main() {
+
+  //
+  // BaseMovieRemoteDataSource baseMovieRemoteDataSource = MovieRemoteDataSource() ;
+  // BaseMoviesRepository baseMoviesRepository = MoviesRepository(baseMovieRemoteDataSource) ;
+  // GetNowPlayingMoviesUseCase getNowPlayingMoviesUseCase = GetNowPlayingMoviesUseCase(baseMoviesRepository);
+
+  // print(getNowPlayingMoviesUseCase.baseMoviesRepository) ;
+
+
   ServicesLocator().init();
   runApp(const MyApp());
 }

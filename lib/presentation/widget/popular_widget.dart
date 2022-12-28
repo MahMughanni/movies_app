@@ -8,7 +8,6 @@ import 'package:shimmer/shimmer.dart';
 
 import '../../core/network/api_constants.dart';
 
-import '../../utils/dummy.dart';
 import '../../utils/enums.dart';
 
 class PopularWidget extends StatelessWidget {

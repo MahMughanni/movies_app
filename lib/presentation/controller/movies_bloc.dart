@@ -14,9 +14,12 @@ class MoviesBloc extends Bloc<MoviesEvent, MoviesState> {
 
   GetTopRatedMoviesUseCase getTopRatedMoviesUseCase;
 
-  MoviesBloc(this.getNowPlayingMoviesUseCase, this.getPopularMoviesUseCase,
-      this.getTopRatedMoviesUseCase)
-      : super(const MoviesState()) {
+  MoviesBloc(
+    this.getNowPlayingMoviesUseCase,
+    this.getPopularMoviesUseCase,
+    this.getTopRatedMoviesUseCase,
+  ) : super(const MoviesState()) {
+
     on<GetNowPlayingMoviesEvent>(_getNowPlayingMovies);
 
     on<GetPopularMoviesEvent>(_getPopularMovies);
@@ -28,6 +31,7 @@ class MoviesBloc extends Bloc<MoviesEvent, MoviesState> {
       GetNowPlayingMoviesEvent event, Emitter<MoviesState> emit) async {
     final response = await getNowPlayingMoviesUseCase();
 
+    // print(response) ;
     response.fold(
         (error) => emit(state.copyWith(
               nowPlayingState: RequestState.error,
