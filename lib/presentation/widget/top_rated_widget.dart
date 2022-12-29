@@ -42,6 +42,7 @@ class TopRatedWidget extends StatelessWidget {
                   itemCount: state.topRatedMoviesLis.length,
                   itemBuilder: (context, index) {
                     final movie = state.topRatedMoviesLis[index];
+
                     return Container(
                       padding: const EdgeInsets.only(right: 8.0),
                       child: InkWell(

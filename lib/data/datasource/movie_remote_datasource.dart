@@ -14,14 +14,12 @@ abstract class BaseMovieRemoteDataSource {
 
 
 
-
 class MovieRemoteDataSource extends BaseMovieRemoteDataSource {
   @override
   Future<List<MovieModel>> getNowPlayingMovies() async {
     final response = await Dio().get(ApiConstance.nowPlayingMovePath);
 
     if (response.statusCode == 200) {
-
       return List<MovieModel>.from(
         (response.data['results'] as List).map(
           (e) => MovieModel.fromJson(e),

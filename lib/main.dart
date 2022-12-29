@@ -9,13 +9,6 @@ import 'domain/repository/base_movies_repository.dart';
 
 void main() {
 
-  //
-  // BaseMovieRemoteDataSource baseMovieRemoteDataSource = MovieRemoteDataSource() ;
-  // BaseMoviesRepository baseMoviesRepository = MoviesRepository(baseMovieRemoteDataSource) ;
-  // GetNowPlayingMoviesUseCase getNowPlayingMoviesUseCase = GetNowPlayingMoviesUseCase(baseMoviesRepository);
-
-  // print(getNowPlayingMoviesUseCase.baseMoviesRepository) ;
-
 
   ServicesLocator().init();
   runApp(const MyApp());
