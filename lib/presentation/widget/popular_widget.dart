@@ -17,8 +17,9 @@ class PopularWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<MoviesBloc, MoviesState>(
       buildWhen: (previous, current) =>
-          previous.popularState != current.popularState ,
+          previous.popularState != current.popularState,
       builder: (context, state) {
+        var popularList = state.popularMoviesList;
         switch (state.popularState) {
           case RequestState.loading:
             return const SizedBox(
@@ -38,9 +39,9 @@ class PopularWidget extends StatelessWidget {
                   shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  itemCount: state.popularMoviesList.length,
+                  itemCount: popularList.length,
                   itemBuilder: (context, index) {
-                    final movie = state.popularMoviesList[index];
+                    final movie = popularList[index];
                     return Container(
                       padding: const EdgeInsets.only(right: 8.0),
                       child: InkWell(

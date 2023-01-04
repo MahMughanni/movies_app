@@ -9,12 +9,11 @@ class MoviesState extends Equatable {
   final List<Movie> topRatedMoviesLis;
 
   final RequestState nowPlayingState;
-
-  final String nowPlayingMessage;
-
   final RequestState popularState;
   final RequestState topRatedState;
+
   final String popularMessage;
+  final String nowPlayingMessage;
   final String topRatedMessage;
 
   const MoviesState({

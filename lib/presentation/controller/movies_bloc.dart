@@ -8,10 +8,11 @@ import 'package:movies_app/presentation/controller/movies_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_app/utils/enums.dart';
 
+import '../../core/usecase/base_usecase.dart';
+
 class MoviesBloc extends Bloc<MoviesEvent, MoviesState> {
   GetNowPlayingMoviesUseCase getNowPlayingMoviesUseCase;
   GetPopularMoviesUseCase getPopularMoviesUseCase;
-
   GetTopRatedMoviesUseCase getTopRatedMoviesUseCase;
 
   MoviesBloc(
@@ -19,7 +20,6 @@ class MoviesBloc extends Bloc<MoviesEvent, MoviesState> {
     this.getPopularMoviesUseCase,
     this.getTopRatedMoviesUseCase,
   ) : super(const MoviesState()) {
-
     on<GetNowPlayingMoviesEvent>(_getNowPlayingMovies);
 
     on<GetPopularMoviesEvent>(_getPopularMovies);
@@ -29,7 +29,7 @@ class MoviesBloc extends Bloc<MoviesEvent, MoviesState> {
 
   FutureOr<void> _getNowPlayingMovies(
       GetNowPlayingMoviesEvent event, Emitter<MoviesState> emit) async {
-    final response = await getNowPlayingMoviesUseCase();
+    final response = await getNowPlayingMoviesUseCase(const NoParameters());
 
     // print(response) ;
     response.fold(
@@ -45,13 +45,12 @@ class MoviesBloc extends Bloc<MoviesEvent, MoviesState> {
 
   FutureOr<void> _getPopularMovies(
       GetPopularMoviesEvent event, Emitter<MoviesState> emit) async {
-    final result = await getPopularMoviesUseCase();
+    final result = await getPopularMoviesUseCase(const NoParameters());
 
-    // print(' popular =  $result ');
     result.fold(
         (error) => emit(state.copyWith(
               popularState: RequestState.error,
-              popularMessage: error.message.toString(),
+              popularMessage: error.message,
             )),
         (response) => emit(state.copyWith(
               popularMoviesList: response,
@@ -61,13 +60,12 @@ class MoviesBloc extends Bloc<MoviesEvent, MoviesState> {
 
   FutureOr<void> _getTopRatedMovies(
       GetTopRatedMoviesEvent event, Emitter<MoviesState> emit) async {
-    final response = await getTopRatedMoviesUseCase();
-    // print(' topRated =  $response ');
+    final response = await getTopRatedMoviesUseCase(const NoParameters());
 
     response.fold(
         (error) => emit(state.copyWith(
               topRatedState: RequestState.error,
-              topRatedMessage: error.message.toString(),
+              topRatedMessage: error.message,
             )),
         (response) => emit(state.copyWith(
               topRatedMoviesLis: response,
