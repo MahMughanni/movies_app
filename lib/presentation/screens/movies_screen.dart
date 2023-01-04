@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:movies_app/core/services/services_locator.dart';
 import 'package:movies_app/presentation/controller/movies_bloc.dart';
 import 'package:movies_app/presentation/controller/movies_event.dart';
+import 'package:movies_app/utils/app_string.dart';
 
 import '../../utils/app_constants.dart';
 import '../widget/now_playing_widget.dart';
@@ -36,7 +37,7 @@ class MoviesScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Popular",
+                      AppString.popular,
                       style: GoogleFonts.poppins(
                         color: AppConstants.textColor,
                         fontSize: 19,
@@ -53,7 +54,7 @@ class MoviesScreen extends StatelessWidget {
                         child: Row(
                           children: const [
                             Text(
-                              'See More',
+                              AppString.seeMore,
                               style: TextStyle(color: AppConstants.textColor),
                             ),
                             Icon(
@@ -79,7 +80,7 @@ class MoviesScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Top Rated",
+                      AppString.topRated,
                       style: GoogleFonts.poppins(
                         color: AppConstants.textColor,
                         fontSize: 19,
@@ -96,7 +97,7 @@ class MoviesScreen extends StatelessWidget {
                         child: Row(
                           children: const [
                             Text(
-                              'See More',
+                              AppString.seeMore,
                               style: TextStyle(
                                 color: AppConstants.textColor,
                               ),
@@ -114,7 +115,6 @@ class MoviesScreen extends StatelessWidget {
               ),
               const SizedBox(height: 50.0),
               const TopRatedWidget(),
-
             ],
           ),
         ),

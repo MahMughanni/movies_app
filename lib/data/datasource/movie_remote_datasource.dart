@@ -53,8 +53,6 @@ class MovieRemoteDataSource extends BaseMovieRemoteDataSource {
       throw ServerExceptions(
           errorMessageModel: ErrorMessageModel.fromJson(response.data));
     }
-
-    throw UnimplementedError();
   }
 
   @override
