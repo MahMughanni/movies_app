@@ -1,8 +1,17 @@
 # movies_app
 
-A new Flutter project.
-using Api form  : https://moverdb.com
+A new Flutter project. 
+
+## Using
+
+Clean Architecture , 
+
+Bloc StateManagement ,
+
+Api 
+
 ## Getting Started
+
 # 💫
 
 
