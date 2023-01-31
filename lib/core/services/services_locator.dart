@@ -32,6 +32,7 @@ class ServicesLocator {
       ),
     );
 
+
     /// Data Source
     getIt.registerLazySingleton<BaseMovieRemoteDataSource>(
         () => MovieRemoteDataSource());
@@ -49,6 +50,7 @@ class ServicesLocator {
 
     getIt.registerLazySingleton<GetTopRatedMoviesUseCase>(
         () => GetTopRatedMoviesUseCase(getIt()));
+
 
     ///
     getIt.registerLazySingleton<GetMoviesDetailsUseCase>(

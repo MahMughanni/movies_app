@@ -22,6 +22,6 @@ class MovieModel extends Movie {
 
   @override
   String toString() {
-    return 'MovieModel{$id , $originalTitle , $overview , $genreIds , $posterPath , $releaseDate , $voteAverage}'  ;
+    return 'MovieModel{$id , $originalTitle , $overview , $genreIds , $posterPath , $releaseDate , $voteAverage}';
   }
 }

@@ -93,7 +93,7 @@ class NowPlayingWidget extends StatelessWidget {
                                       ),
                                       const SizedBox(width: 4.0),
                                       Text(
-                                        AppString.nowPlaying.toUpperCase(),
+                                        AppStringConstants.nowPlaying.toUpperCase(),
                                         style: const TextStyle(
                                           color: AppConstants.textColor,
                                           fontSize: 16.0,

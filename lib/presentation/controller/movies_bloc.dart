@@ -27,6 +27,9 @@ class MoviesBloc extends Bloc<MoviesEvent, MoviesState> {
     on<GetTopRatedMoviesEvent>(_getTopRatedMovies);
   }
 
+
+
+
   FutureOr<void> _getNowPlayingMovies(
       GetNowPlayingMoviesEvent event, Emitter<MoviesState> emit) async {
     final response = await getNowPlayingMoviesUseCase(const NoParameters());
@@ -42,6 +45,9 @@ class MoviesBloc extends Bloc<MoviesEvent, MoviesState> {
               nowPlayingState: RequestState.loaded,
             )));
   }
+
+
+
 
   FutureOr<void> _getPopularMovies(
       GetPopularMoviesEvent event, Emitter<MoviesState> emit) async {

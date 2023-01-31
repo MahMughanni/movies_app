@@ -24,6 +24,7 @@ class MoviesRepository extends BaseMoviesRepository {
     } on ServerExceptions catch (error) {
       return Left(ServerFailure(error.errorMessageModel.statusMessage));
     }
+
   }
 
   @override

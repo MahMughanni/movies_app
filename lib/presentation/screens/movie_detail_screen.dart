@@ -112,7 +112,7 @@ class MovieDetailContent extends StatelessWidget {
                                 ),
                                 child: Text(
                                   movie.releaseDate
-                                      .split(AppString.releaseDateSplit)[0],
+                                      .split(AppStringConstants.releaseDateSplit)[0],
                                   style: const TextStyle(
                                     fontSize: 16.0,
                                     fontWeight: FontWeight.w500,
@@ -170,7 +170,7 @@ class MovieDetailContent extends StatelessWidget {
                           ),
                           const SizedBox(height: 8.0),
                           Text(
-                            '${AppString.genres}:  ${_showGenres(movie.genres)} ',
+                            '${AppStringConstants.genres}:  ${_showGenres(movie.genres)} ',
                             style: const TextStyle(
                               color: Colors.white70,
                               fontSize: 12.0,
@@ -190,7 +190,7 @@ class MovieDetailContent extends StatelessWidget {
                       from: 20,
                       duration: const Duration(milliseconds: 500),
                       child: Text(
-                        AppString.moreLikeThis.toUpperCase(),
+                        AppStringConstants.moreLikeThis.toUpperCase(),
                         style: const TextStyle(
                           fontSize: 16.0,
                           fontWeight: FontWeight.w500,

@@ -10,7 +10,6 @@ import '../../utils/app_constants.dart';
 import '../widget/now_playing_widget.dart';
 import '../widget/popular_widget.dart';
 import '../widget/top_rated_widget.dart';
-import 'movie_detail_screen.dart';
 
 class MoviesScreen extends StatelessWidget {
   const MoviesScreen({Key? key}) : super(key: key);
@@ -37,7 +36,7 @@ class MoviesScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      AppString.popular,
+                      AppStringConstants.popular,
                       style: GoogleFonts.poppins(
                         color: AppConstants.textColor,
                         fontSize: 19,
@@ -54,7 +53,7 @@ class MoviesScreen extends StatelessWidget {
                         child: Row(
                           children: const [
                             Text(
-                              AppString.seeMore,
+                              AppStringConstants.seeMore,
                               style: TextStyle(color: AppConstants.textColor),
                             ),
                             Icon(
@@ -80,7 +79,7 @@ class MoviesScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      AppString.topRated,
+                      AppStringConstants.topRated,
                       style: GoogleFonts.poppins(
                         color: AppConstants.textColor,
                         fontSize: 19,
@@ -97,7 +96,7 @@ class MoviesScreen extends StatelessWidget {
                         child: Row(
                           children: const [
                             Text(
-                              AppString.seeMore,
+                              AppStringConstants.seeMore,
                               style: TextStyle(
                                 color: AppConstants.textColor,
                               ),

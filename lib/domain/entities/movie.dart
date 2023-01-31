@@ -17,6 +17,9 @@ class Movie {
     required this.voteAverage,
   });
 
+
+
+
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||

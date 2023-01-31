@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: AppString.appName,
+      title: AppStringConstants.appName,
       theme: ThemeData.dark().copyWith(backgroundColor: Colors.grey.shade800),
       home: const MoviesScreen(),
     );
