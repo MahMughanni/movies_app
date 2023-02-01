@@ -1,5 +1,7 @@
 # movies_app
 
+[![Dart](https://github.com/MahMughanni/movies_app/actions/workflows/dart.yml/badge.svg)](https://github.com/MahMughanni/movies_app/actions/workflows/dart.yml)
+
 A new Flutter project. 
 
 ## Using
