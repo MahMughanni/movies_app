@@ -1,6 +1,7 @@
 # movies_app
 
 [![Dart](https://github.com/MahMughanni/movies_app/actions/workflows/dart.yml/badge.svg)](https://github.com/MahMughanni/movies_app/actions/workflows/dart.yml)
+[![Codemagic build status](https://api.codemagic.io/apps/63da4f03bd54b8bf0b3f0ff0/63da4f03bd54b8bf0b3f0fef/status_badge.svg)](https://codemagic.io/apps/63da4f03bd54b8bf0b3f0ff0/63da4f03bd54b8bf0b3f0fef/latest_build)
 
 A new Flutter project. 
 
