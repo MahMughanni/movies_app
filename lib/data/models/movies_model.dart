@@ -10,6 +10,7 @@ class MovieModel extends Movie {
       required super.releaseDate,
       required super.voteAverage});
 
+
   factory MovieModel.fromJson(Map<String, dynamic> fromJson) => MovieModel(
         id: fromJson['id'],
         originalTitle: fromJson['original_title'],
@@ -20,8 +21,16 @@ class MovieModel extends Movie {
         voteAverage: fromJson['vote_average'].toDouble(),
       );
 
+
+
+
+
+
   @override
   String toString() {
-    return 'MovieModel{$id , $originalTitle , $overview , $genreIds , $posterPath , $releaseDate , $voteAverage}';
+    return 'MovieModel{'
+        '$id , $originalTitle , $overview '
+        ', $genreIds , $posterPath ,'
+        ' $releaseDate , $voteAverage}';
   }
 }

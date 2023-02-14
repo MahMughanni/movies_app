@@ -11,8 +11,7 @@ class MovieDetailsState extends Equatable {
   final RequestState recommendationState;
   final String recommendationMessage;
 
-  const MovieDetailsState(
-      {this.movieDetails,
+  const MovieDetailsState({this.movieDetails,
       this.movieDetailsState = RequestState.loading,
       this.moveDetailsMessage = '',
       this.recommendationList = const [],

@@ -14,6 +14,7 @@ class MovieDetailsModel extends MovieDetails {
       required super.voteAverage,
       required super.genres});
 
+
   factory MovieDetailsModel.fromJson(Map<String, dynamic> fromJson) {
     return MovieDetailsModel(
       backdropPath:
@@ -29,7 +30,14 @@ class MovieDetailsModel extends MovieDetails {
       ),
     );
   }
+
+
+
 }
+
+
+
+
 
 class GenresModel extends Genres {
   const GenresModel({

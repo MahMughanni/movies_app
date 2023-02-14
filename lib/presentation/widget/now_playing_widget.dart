@@ -16,15 +16,16 @@ class NowPlayingWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var height = MediaQuery.of(context).size.height;
     return BlocBuilder<MoviesBloc, MoviesState>(
       buildWhen: (previous, current) =>
           previous.nowPlayingState != current.nowPlayingState,
       builder: (context, state) {
         switch (state.nowPlayingState) {
           case RequestState.loading:
-            return const SizedBox(
-              height: 400,
-              child: Center(
+            return SizedBox(
+              height: height * .55,
+              child: const Center(
                 child: CircularProgressIndicator(),
               ),
             );
@@ -33,7 +34,8 @@ class NowPlayingWidget extends StatelessWidget {
               duration: const Duration(milliseconds: 500),
               child: CarouselSlider(
                 options: CarouselOptions(
-                  height: 400.0,
+                  autoPlay: true,
+                  height: height * .55,
                   viewportFraction: 1.0,
                   onPageChanged: (index, reason) {},
                 ),
@@ -70,7 +72,7 @@ class NowPlayingWidget extends StatelessWidget {
                             },
                             blendMode: BlendMode.dstIn,
                             child: CachedNetworkImage(
-                              height: 560.0,
+                              height: height * .6,
                               width: double.infinity,
                               imageUrl: ApiConstance.imageUrl(item.posterPath),
                               fit: BoxFit.cover,
@@ -93,10 +95,12 @@ class NowPlayingWidget extends StatelessWidget {
                                       ),
                                       const SizedBox(width: 4.0),
                                       Text(
-                                        AppStringConstants.nowPlaying.toUpperCase(),
+                                        AppStringConstants.nowPlaying
+                                            .toUpperCase(),
                                         style: const TextStyle(
                                           color: AppConstants.textColor,
-                                          fontSize: 16.0,
+                                          fontSize:
+                                              AppFontSizeConstants.fontSize16,
                                         ),
                                       ),
                                     ],
@@ -109,7 +113,7 @@ class NowPlayingWidget extends StatelessWidget {
                                     textAlign: TextAlign.center,
                                     style: const TextStyle(
                                       color: AppConstants.textColor,
-                                      fontSize: 24,
+                                      fontSize: AppFontSizeConstants.fontSize24,
                                     ),
                                   ),
                                 ),

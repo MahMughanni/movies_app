@@ -11,7 +11,13 @@ import 'package:movies_app/presentation/controller/movies_bloc.dart';
 
 import '../../domain/usecase/get_movies_details_usecase.dart';
 
+
+
+
 final getIt = GetIt.instance;
+
+
+
 
 class ServicesLocator {
   void init() {
@@ -40,6 +46,8 @@ class ServicesLocator {
     /// Repository
     getIt.registerLazySingleton<BaseMoviesRepository>(
         () => MoviesRepository((getIt())));
+
+
 
     /// Use Case
     getIt.registerLazySingleton<GetNowPlayingMoviesUseCase>(

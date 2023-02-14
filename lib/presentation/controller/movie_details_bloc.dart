@@ -27,8 +27,10 @@ class MovieDetailsBloc extends Bloc<MovieDetailsEvent, MovieDetailsState> {
 
   FutureOr<void> _getMovieDetails(
       GetMovieDetailsEvent event, Emitter<MovieDetailsState> emit) async {
-    final response =
-        await moviesDetailsUseCase(MovieDetailsParameters(movieId: event.id));
+    final response = await moviesDetailsUseCase(MovieDetailsParameters(movieId: event.id));
+
+
+
     response.fold(
         (l) => emit(state.copyWith(
             movieDetailsState: RequestState.error,

@@ -95,8 +95,7 @@ class MoviesScreen extends StatelessWidget {
                         padding: const EdgeInsets.all(8.0),
                         child: Row(
                           children: const [
-                            Text(
-                              AppStringConstants.seeMore,
+                            Text(AppStringConstants.seeMore,
                               style: TextStyle(
                                 color: AppConstants.textColor,
                               ),

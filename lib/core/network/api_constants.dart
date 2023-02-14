@@ -2,16 +2,20 @@ class ApiConstance {
   static const String baseUrl = 'https://api.themoviedb.org/3';
   static const String apiKey = '2822a930b0736e9085344f2fb46a90e3';
 
-  // static const String endPoint = '/movie/now_playing';
 
   static const String nowPlayingMovePath =
       '$baseUrl/movie/now_playing?api_key=$apiKey';
+
+
+
+
   static const String getPopularMoviePath =
       '$baseUrl/movie/popular?api_key=$apiKey';
-  static const String getTopRatedMoviePath =
-      '$baseUrl/movie/top_rated?api_key=$apiKey';
 
-  /// https://api.themoviedb.org/3/movie/2?api_key=2822a930b0736e9085344f2fb46a90e3&language=en-US
+
+
+  static const String getTopRatedMoviePath = '$baseUrl/movie/top_rated?api_key=$apiKey';
+
 
 
 

@@ -1,6 +1,4 @@
-import 'package:equatable/equatable.dart';
-
-class ErrorMessageModel extends Equatable {
+class ErrorMessageModel {
   final int statusCode;
   final String statusMessage;
   final bool success;
@@ -17,7 +15,4 @@ class ErrorMessageModel extends Equatable {
         statusMessage: fromJson['status_message'],
         success: fromJson['success'],
       );
-
-  @override
-  List<Object?> get props => [statusCode, statusMessage, success];
 }
