@@ -32,8 +32,7 @@ class MoviesBloc extends Bloc<MoviesEvent, MoviesState> {
     final response = await getNowPlayingMoviesUseCase(const NoParameters());
 
     // print(response) ;
-    response.fold(
-        (error) => emit(state.copyWith(
+    response.fold((error) => emit(state.copyWith(
               nowPlayingState: RequestState.error,
               nowPlayingMessage: error.message,
             )),

@@ -36,7 +36,7 @@ class PopularWidget extends StatelessWidget {
             return FadeIn(
                 duration: const Duration(milliseconds: 500),
                 child: CarouselSlider(
-                  items: popularList.map((item) {
+                  items: popularList.map((e) {
                     return GestureDetector(
                       key: const Key('openMovieMinimalDetail'),
                       onTap: () {},

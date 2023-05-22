@@ -8,24 +8,20 @@ import 'package:movies_app/domain/usecase/get_recommendations_usecase.dart';
 import '../../domain/usecase/get_movies_details_usecase.dart';
 import '../models/recommendations_model.dart';
 
-
-
 abstract class BaseMovieRemoteDataSource {
   Future<List<MovieModel>> getNowPlayingMovies();
+
   Future<List<MovieModel>> getPopularMovies();
+
   Future<List<MovieModel>> getTopRatedMovies();
+
   Future<MovieDetailsModel> getMoviesDetails(MovieDetailsParameters parameters);
-  Future<List<RecommendationsModel>> getRecommendations(RecommendationsParameters parameters);
+
+  Future<List<RecommendationsModel>> getRecommendations(
+      RecommendationsParameters parameters);
 }
 
-
-
-
-
 class MovieRemoteDataSource extends BaseMovieRemoteDataSource {
-
-
-
   @override
   Future<List<MovieModel>> getNowPlayingMovies() async {
     final response = await Dio().get(ApiConstance.nowPlayingMovePath);
@@ -36,7 +32,6 @@ class MovieRemoteDataSource extends BaseMovieRemoteDataSource {
           (e) => MovieModel.fromJson(e),
         ),
       );
-
     } else {
       throw ServerExceptions(
         errorMessageModel: ErrorMessageModel.fromJson(response.data),

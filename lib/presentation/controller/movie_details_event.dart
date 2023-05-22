@@ -19,6 +19,5 @@ class GetMovieRecommendationEvent extends MovieDetailsEvent {
   const GetMovieRecommendationEvent(this.id);
 
   @override
-  // TODO: implement props
   List<Object?> get props => [];
 }

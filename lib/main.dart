@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: true,
+      debugShowCheckedModeBanner: false,
       title: AppStringConstants.appName,
       theme: ThemeData.dark().copyWith(backgroundColor: Colors.grey.shade800),
       home: const MoviesScreen(),

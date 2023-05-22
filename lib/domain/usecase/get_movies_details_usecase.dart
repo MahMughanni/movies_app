@@ -18,10 +18,6 @@ class GetMoviesDetailsUseCase extends BaseUseCase<MovieDetails, MovieDetailsPara
 }
 
 
-
-
-
-
 class MovieDetailsParameters extends Equatable {
   final int movieId;
 
